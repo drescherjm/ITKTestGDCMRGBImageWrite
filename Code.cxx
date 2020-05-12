@@ -41,7 +41,7 @@ main(int argc, char* argv[])
 	writer->SetInput(reader->GetOutput());
 	writer->UseInputMetaDataDictionaryOff();
 	//writer->UseInputMetaDataDictionaryOn();
-	//writer->SetImageIO(gdcmImageIO);
+	writer->SetImageIO(gdcmImageIO);
 
 	try
 	{
