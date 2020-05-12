@@ -34,14 +34,14 @@ main(int argc, char* argv[])
 
 	gdcmImageIO->KeepOriginalUIDOn();
 
-	fileName += ".out.dcm";
+	fileName += ".new.dcm";
 
 	RGBWriterType::Pointer writer = RGBWriterType::New();
 	writer->SetFileName(fileName);
 	writer->SetInput(reader->GetOutput());
 	writer->UseInputMetaDataDictionaryOff();
 	//writer->UseInputMetaDataDictionaryOn();
-	writer->SetImageIO(gdcmImageIO);
+	//writer->SetImageIO(gdcmImageIO);
 
 	try
 	{
